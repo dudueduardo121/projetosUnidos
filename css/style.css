@@ -93,6 +93,10 @@ table {
   font-weight: bold;
 }
 
+.container {
+  padding: 0;
+}
+
 .footer {
   background: #333;
   height: 70px;
