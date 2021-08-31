@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="/css/style.css">
+  <title>Unidos Futebol Clube</title>
+</head>
+<body>
+
+  <nav class="navbar nav-menu navbar-expand-lg ">
+    <a class="navbar-brand img-logo" href="#">
+      <img src="./assets/icones/logo.png" alt="UNIDOS FUTEBOL CLUBE">
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon">
+        <i class="fa fa-bars icon-bar"></i>
+      </span>
+    </button>
+  
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <!-- <ul class="navbar-nav nav-li">
+        <li class="nav-item active">
+          <a class="nav-link" href="#">INICIO</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="./pages/jogadores.html">JOGADORES</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="./pages/Mensalidade.html">MENSALIDADE</a>
+        </li>
+      </ul> -->
+    </div>
+  </nav>
+
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-5 my-5">
+        <h1 class="titulo-conteudo">
+          PAINEL ATLETAS
+        </h1>
+        
+        <div class="painel-1">
+          <div class="modal fade msgErroJogador"  id="exampleModal2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body modal-texto">
+                  <p>Por favor preenha os campos nome</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="msgErroJogador">
+            <p>Por favor preenha o campo nome</p>
+          </div>
+          <div class="msgSucessoJogador">
+              <p>Jogador adicionada com sucesso.</p>
+          </div>
+          <div class="msgExclusaoJogador">
+              <p>Jogador removida com sucesso.</p>
+          </div>
+          <div class="container-form">
+            <h3><strong>ADICIONAR NOVO JOGADOR</strong></h3>
+            
+            <form id="formJogador">
+              <div class="form-control-nome">
+                <label for="text">NOME</label>
+                <input autofocus type="text" id="nome" placeholder="Nome do novo jogador" />
+              </div>
+      
+      
+              <button class="btn btn-jogador">ADICIONAR</button>
+            </form>
+          </div>
+          <div class="container-transacoes">
+            <h3><strong>JOGADORES</strong></h3>
+            
+            <ul id="transactionsJogador" class="jogadores">
+              
+            </ul>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="col-md-7 my-5">
+        <h1 class="titulo-conteudo">
+          PAINEL MENSALIDADE
+        </h1>
+        <div class="painel-2">
+          <div class="modal fade msgErro" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body modal-texto">
+                  <p>Por favor preenha os campos nome e valor</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="msgErro">
+            <p>Por favor preenha os campos nome e valor</p>
+          </div>
+          <div class="msgSucesso">
+              <p>Transação adicionada com sucesso.</p>
+          </div>
+          <div class="msgExclusao">
+              <p>Transação removida com sucesso.</p>
+          </div>
+
+          <div class="container">
+            <div class="balanco-atual">
+              <h4><strong>SALDO EM CAIXA</strong></h4>
+              <br>
+              <h1 id="balance" class="balance"></h1>
+            </div>
+
+            <div class="inc-exp-container">
+              <div>
+                <h4><strong>RECEITAS DO CLUBE</strong></h4>
+                <p id="money-plus" class="money plus"></p>
+              </div>
+
+              <div>
+                <h4><strong>DESPESAS DO CLUBE</strong></h4>
+                <p id="money-minus" class="money minus"></p>
+              </div>
+            </div>
+
+            <div class="container-section">
+              <div class="container-transacoes">
+                <h3><strong>TRANSAÇÕES</strong></h3>
+                
+                <ul id="transactions" class="transactions">
+                  
+                </ul>
+              </div>
+        
+              <div class="container-form">
+                <h3><strong>ADICIONAR TRANSAÇÃO</strong></h3>
+                
+                <form id="form">
+                  <div class="form-control-nome">
+                    <label for="text">NOME</label>
+                    <input autofocus type="text" id="text" placeholder="Nome da transação" />
+                  </div>
+          
+                  <div class="form-control-valor">
+                    <label for="amount">VALOR <br />
+                      <small>(negativo - despesas, positivo - receitas)</small>
+                    </label>
+                    <input type="number" id="amount" placeholder="Valor da transação" />
+                  </div>
+          
+                  <button class="btn">ADICIONAR</button>
+                </form>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <p>
+      UNIDOS FUTEBOL CLUBE 2021
+    </p>
+  </footer>
+
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  <script src="./js/transacoes.js"></script>
+  <script src="./js/jogadores.js"></script>
+  <script src="http://www.w3schools.com/lib/w3data.js"></script>
+</body>
+</html>

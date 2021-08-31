@@ -1,0 +1,442 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap');
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+  background: #f8f8f8;
+  font-family: 'Roboto', sans-serif;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+
+strong {
+  font-weight: bold;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+.nav-menu {
+  background-image: linear-gradient(#EF3232, #000, #0031BE);
+}
+
+.img-logo, img {
+  width: 275px;
+}
+
+.texto-logo {
+  position: absolute;
+  left: 95px;
+  font-size: 20px;
+  font-weight: 900;
+  color: #fff;
+}
+
+.nav-li {
+  margin-left: 500px;
+  color: #fff;
+  font-size: 18px;
+}
+
+.icon-bar {
+  color: #fff;
+  font-size: 30px;
+}
+
+.painel-1, .painel-2 {
+  background-color: #fff;
+  padding: 30px;
+  margin-top: 15px;
+  box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+}
+
+.titulo-conteudo {
+  font-size:30px;
+  font-weight: bold;
+}
+
+.footer {
+  background: #333;
+  height: 40px;
+  padding: 30px;
+}
+
+p {
+  text-align: center;
+  font-size:25px;
+  color: #fff;
+}
+
+/* despesas */
+
+
+
+:root {
+  --box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+}
+
+.container-section {
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-gap: 1rem;
+}
+
+h1 {
+  letter-spacing: 1px;
+  margin: 0;
+  color: #333;
+}
+
+h3 {
+  border-bottom: 1px solid #bbb;
+  padding-bottom: 10px;
+  margin: 40px 0 10px;
+}
+
+h4 {
+  margin: 0;
+  text-transform: uppercase;
+}
+
+.inc-exp-container {
+  background-color: #fff;
+  box-shadow: var(--box-shadow);
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  margin: 20px 0;
+}
+
+.inc-exp-container > div {
+  flex: 1;
+  text-align: center;
+}
+
+.inc-exp-container > div:first-of-type {
+  border-right: 1px solid #dedede;
+}
+
+.balance {
+  font-size: 24px;
+}
+
+.money {
+  font-size: 20px;
+  letter-spacing: 1px;
+  margin: 5px 0;
+}
+
+.money.plus {
+  color: #32CD32;
+}
+
+.money.minus {
+  color: #DC143C;
+}
+
+label {
+  display: inline-block;
+  margin: 10px 0;
+}
+
+input[type='text'],
+input[type='number'] {
+  border: 1px solid #dedede;
+  border-radius: 2px;
+  display: block;
+  font-size: 16px;
+  padding: 10px;
+  width: 100%;
+}
+
+.btn {
+  cursor: pointer;
+  background-color: #0031BE;
+  box-shadow: var(--box-shadow);
+  color: #fff;
+  border: 0;
+  display: block;
+  font-size: 16px;
+  margin: 10px 0 30px;
+  padding: 10px;
+  width: 100%;
+  transition: 0.5s;
+}
+
+.btn-jogador {
+  background: #DC143C;
+}
+.btn:hover {
+  opacity: 0.8;
+}
+
+.btn:focus,
+.delete-btn:focus {
+  outline: 0;
+}
+
+.transactions {
+  list-style-type: none;
+  padding: 0;
+  margin-bottom: 40px;
+}
+.jogadores {
+  position: relative;
+  list-style-type: none;
+  padding: 0;
+  margin-bottom: 40px;
+}
+
+.jogadores li::before {
+  content: "";
+  position: absolute;
+  width: 4px;
+  height: 100%;
+  right: 0;
+  border-right: 5px solid #DC143C;
+}
+
+.transactions li {
+  background-color: #fff;
+  box-shadow: var(--box-shadow);
+  color: #333;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  padding: 10px;
+  margin: 10px 0;
+}
+
+.jogadores li {
+  background-color: #fff;
+  box-shadow: var(--box-shadow);
+  color: #333;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  padding: 10px;
+  margin: 10px 0;
+  align-items: center;
+  font-size: 16px;
+}
+
+.transactions li.plus {
+  position: relative;
+}
+.transactions li.plus::before {
+  content: '';
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 4px;
+  height: 100%;
+  border-right: 5px solid #32CD32;
+}
+.transactions li.minus {
+  border-right: 5px solid #DC143C;
+}
+
+
+.delete-btn {
+  cursor: pointer;
+  background-color: #DC143C;
+  border: 0;
+  color: #fff;
+  font-size: 20px;
+  line-height: 20px;
+  padding: 2px 5px;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translate(-100%, -50%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.transactions li:hover .delete-btn {
+  opacity: 1;
+}
+
+.jogadores li:hover .delete-btn {
+  opacity: 1;
+}
+
+.msgErro {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.msgErro {
+  display: none;
+  position: fixed;
+  opacity: 0.9;
+  color: #ffffff;
+}
+.msgErroJogador {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.msgErroJogador {
+  display: none;
+  position: fixed;
+  opacity: 0.9;
+  color: #ffffff;
+}
+
+.modal-body {
+  padding: 4rem;
+}
+
+.modal-texto p {
+  color: #333;
+}
+
+.modal-header {
+  background: #DC143C;
+}
+
+.active {
+  display: flex;
+}
+
+
+.btn-fehar {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  background: #ffffff;
+  border: 1px solid #2ecc71;
+  color: #2ecc71;
+  font-weight: bold;
+}
+
+
+.msgSucesso, .msgSucessoJogador{
+  position: relative;
+  display: none;
+  transition: 5s;
+  opacity: 0.5;
+}
+.sucesso {
+  position: absolute;
+  top: 10px;
+  right: 0;
+  padding: 10px;
+  text-align: center;
+  background-color: #2ecc71;
+  color: #ffffff;
+  width: 500px;
+  line-height: 15px;
+  z-index: 99;
+  display: block;
+  animation: sucesso 4s ease-in-out;
+  
+}
+
+@-webkit-keyframes sucesso {
+  100% { opacity: 0; }
+  0% { opacity: 1; } 
+}
+
+.msgExclusao, .msgExclusaoJogador {
+  position: relative;
+  display: none;
+}
+
+.exclusao {
+  position: absolute;
+  top: 0px;
+  right: 0;
+  padding: 10px;
+  text-align: center;
+  background-color: #DC143C;
+  opacity: 0.8;
+  color: #ffffff;
+  width: 500px;
+  line-height: 15px;
+  z-index: 99;
+  display: block;
+
+  animation: exclusao 4s ease-in-out;
+  
+}
+
+@-webkit-keyframes exclusao {
+  100% { opacity: 0; }
+  0% { opacity: 1; } 
+}
+
+
+
+
+
+@media screen and (max-width: 600px) {
+    .container {
+      width: 100%;
+    }
+    .inc-exp-container {
+      margin: 15px;
+    }
+    .container-section {
+      display: flex;
+      flex-direction: column;
+      margin: 15px;
+      gap: 0;
+    }
+    .balanco-atual {
+      text-align: center;
+    }
+    .sucesso,.exclusao {
+      top: 40%;
+      width: 90%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+}
+
+.icone-jogador {
+  font-size: 40px;
+  color: #DC143C;
+}
