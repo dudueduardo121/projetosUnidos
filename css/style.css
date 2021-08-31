@@ -429,6 +429,11 @@ input[type='number'] {
     }
     .balanco-atual {
       text-align: center;
+      padding-bottom: 15px;
+    }
+    .transactions li {
+      padding: 20px;
+      font-size: 18px;
     }
     .sucesso,.exclusao {
       top: 40%;
