@@ -95,8 +95,8 @@ table {
 
 .footer {
   background: #333;
-  height: 40px;
-  padding: 30px;
+  height: 70px;
+  padding: 25px;
 }
 
 p {
@@ -156,6 +156,7 @@ h4 {
 
 .balance {
   font-size: 24px;
+  color: #0031BE;
 }
 
 .money {
@@ -413,16 +414,13 @@ input[type='number'] {
 
 
 @media screen and (max-width: 600px) {
-    .container {
-      width: 100%;
-    }
     .inc-exp-container {
-      margin: 15px;
+      margin: 0px;
     }
     .container-section {
       display: flex;
       flex-direction: column;
-      margin: 15px;
+      margin: 0px;
       gap: 0;
     }
     .balanco-atual {
